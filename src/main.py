@@ -37,7 +37,7 @@ if __name__ == '__main__':
     # PREPARING TRAIN DATA
     print('\nPreparing the train data...')
 
-    raw_train = pd.read_csv('train.csv')
+    raw_train = pd.read_csv('src/train.csv')
     X_train, y_train = get_train_datasets(raw_train)
 
     X_train, scaler_1, scaler_2, age_reg = training_set(X_train)
@@ -45,7 +45,7 @@ if __name__ == '__main__':
     # PREPARING TEST DATA
     print('Preparing the test data...')
 
-    raw_test = pd.read_csv('test.csv')
+    raw_test = pd.read_csv('src/test.csv')
     X_test = get_test_datasets(raw_test)
 
     X_test = test_set(X_test, scaler_1, scaler_2, age_reg)
@@ -54,6 +54,6 @@ if __name__ == '__main__':
     print('Making the prediction...')
 
     y_pred = make_prediction(X_train, y_train, X_test).astype(int)
-    y_pred.to_csv('prediction.csv', header=True)
+    y_pred.to_csv('src/prediction.csv', header=True)
 
     print('\nAll done.')
