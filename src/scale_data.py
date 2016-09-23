@@ -8,9 +8,9 @@ def create_scaler_1(X):
 
     # This function creates a scaler X
 
-    aux = X[['SibSp', 'Parch', 'Fare']]
+    features_to_scale = X[['SibSp', 'Parch', 'Fare']]
     scaler = StandardScaler()
-    scaler.fit(aux)
+    scaler.fit(features_to_scale)
 
     return scaler
 
