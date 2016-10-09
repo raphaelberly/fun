@@ -8,7 +8,7 @@ This project aims at implementing several methods for sentiment analysis in Pyth
 
 Hereby a list of the different scripts implemented:
 
-* [McDonald's Sentiment Analysis: Multinomial Naive Bayes](#mcdonald-s-sentiment-analysis-multinomial-naive-bayes)
+* [McDonald's Sentiment Analysis: Multinomial Naive Bayes](#mcdonalds-sentiment-analysis-multinomial-naive-bayes)
 
 -----
 
