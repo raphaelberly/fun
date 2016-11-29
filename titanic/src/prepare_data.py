@@ -1,11 +1,8 @@
-
-from src.scale_data import create_scaler_1, apply_scaler_1, create_scaler_2, apply_scaler_2
-
-# PREPARATION DATA FUNCTIONS
-
 import numpy as np
 import pandas as pd
 from sklearn.neighbors import KNeighborsRegressor
+
+from titanic.src.scale_data import create_scaler_1, apply_scaler_1, create_scaler_2, apply_scaler_2
 
 
 def dummify(X):
