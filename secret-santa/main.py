@@ -12,7 +12,7 @@ def load_data():
 
 # Create list of random indexes
 def create_indexes(nb_participants):
-    indexes = [i for i in range(nb_participants)]
+    indexes = [i+1 for i in range(nb_participants)]
     return shuffle(indexes)
 
 
