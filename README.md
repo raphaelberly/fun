@@ -28,10 +28,12 @@ This private competition was hosted on Kaggle by [Data School](http://www.datasc
 
 The objective was to predict the status (Open or Close) of a post, based on its content and metadata.
 
-The approach which was chosen was model stacking:
+The approach which was the following:
 
-* Step 1: feature engineering to create new numerical features out of the data, and train a model on the most relevant ones
-* Step 2: vectorize text data from the post, and train a model on the resulting document-term matrix
-* Step 3: combine the predictions of both models to get an overall prediction
+* Step 1: Loading and going through the data
+* Step 2: Feature engineering (creating numerical features out of the data and meta-data)
+* Step 3: Training a model on the engineered numerical features only
+* Step 4: Vectorizing text data and training a model on the resulting document-term matrix
+* Step 5: Combining engineered numerical features and vectorized text data. Two method were tested. The first one is model stacking, *i.e.* making both models from step 3 and 4 vote. The second one consists of concatenating vectorized text data and engineered numerical features, and training one model on the resulting dataset.
 
-A log loss of 0.46369, giving me the 3rd position on this competition.
+The best results were obtained with the second method. Such a submission scored with a log loss of 0.46281 for the public score and of 0.46369 for the private score, ranking 3rd of the competiton.

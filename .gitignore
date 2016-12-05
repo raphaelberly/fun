@@ -11,6 +11,5 @@ __init__.py
 
 # Stack Overflow Project
 /stack-overflow-private/out
-/stack-overflow-private/tmp
 /stack-overflow-private/data
 /stack-overflow-private/Statistical_Distributions.ipynb
