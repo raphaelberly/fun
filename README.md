@@ -20,9 +20,9 @@ This public kaggle competition, which is hosted [here](https://www.kaggle.com/c/
 
 This objective with this project was to implement the training phase as properly as possible, using the whole sklearn workflow (pipelines, unions, etc). One can find all the details and explanations about this in the file *Notebook.ipynb*.
 
-A scripted version has also been implemented, and can be found in the folder *src*. It basically simulates the case where one would have to re-run the script on new train & test sets on a regular basis.
+A scripted version of the project has also been implemented, and can be found in the folder *src*. This kind of scripted version is basically the version which is used in practice, after the discovery/research phase, for example in the case where one would have to run the script on new train & test sets on a regular basis.
 
-This version of the model has a precision of 78.9%. Some improvement leads are given in the  last part of the Notebook.
+A precision of 78.9% has been reached by one submission of our model. Some improvement leads are given in the last part of the Notebook.
 
 -----
 
