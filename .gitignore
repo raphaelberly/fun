@@ -6,8 +6,7 @@ __init__.py
 .ipynb_checkpoints
 
 # Titanic Project
-/titanic/testing.ipynb
-/titanic/testing2.ipynb
+/titanic/testing*.ipynb
 
 # Stack Overflow Project
 /stack-overflow-private/out
