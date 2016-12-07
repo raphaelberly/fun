@@ -6,6 +6,7 @@ __init__.py
 .ipynb_checkpoints
 
 # Titanic Project
+/titanic/data/
 /titanic/testing*.ipynb
 
 # Stack Overflow Project

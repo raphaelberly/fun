@@ -18,7 +18,11 @@ Hereby a list of the different competitions:
 
 This public kaggle competition, which is hosted [here](https://www.kaggle.com/c/titanic), aims at predicting the survival of passengers from Titanic. A dataset containing 891 observations and 10 features is provided for training.
 
-A logistic regression was used for prediction, and of overall accuracy of 79.9% was reached with the submission on Kaggle (top 17%).
+This objective with this project was to implement the training phase as properly as possible, using the whole sklearn workflow (pipelines, unions, etc). One can find all the details and explanations about this in the file *Notebook.ipynb*.
+
+A scripted version has also been implemented, and can be found in the folder *src*. It basically simulates the case where one would have to re-run the script on new train & test sets on a regular basis.
+
+This version of the model has a precision of 78.9%. Some improvement leads are given in the  last part of the Notebook.
 
 -----
 
