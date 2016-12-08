@@ -1,35 +1,36 @@
 import pandas as pd
-from classify_data import make_prediction
-from prepare_data import get_datasets, prepare_train_set, prepare_test_set
+from classification import make_prediction
+from preparation import prepare_dataset, prepare_pipeline
 
 
 def main():
+    """
+    Main file of the program. Prepares the data, the pipeline, and finally trains the model and predicts classes for
+    the test data (stored in data/prediction.csv)
+    :return: None
+    """
 
     # PREPARING TRAIN DATA
     print('\nPreparing the train data...')
-
-    raw_train = pd.read_csv('src/train.csv')
-    X_train, y_train = get_datasets(raw_train, 'train')
-
-    X_train, scaler_1, scaler_2, age_reg = prepare_train_set(X_train)
+    raw_train = pd.read_csv('data/train.csv')
+    X_train = prepare_dataset(raw_train)
+    y_train = raw_train.Survived
 
     # PREPARING TEST DATA
     print('Preparing the test data...')
+    raw_test = pd.read_csv('data/test.csv')
+    X_test = prepare_dataset(raw_test)
 
-    raw_test = pd.read_csv('src/test.csv')
-    X_test = get_datasets(raw_test, 'test')
+    # PREPARING PIPELINE, TRAINING AND PREDICTING
+    print('Preparing and training the model...')
+    pipe = prepare_pipeline()
+    output = make_prediction(pipe, X_train, y_train, X_test)
+    output.to_csv('data/prediction.csv', index=False, header=True)
 
-    X_test = prepare_test_set(X_test, scaler_1, scaler_2, age_reg)
-
-    # MAKING PREDICTION
-    print('Making the prediction...')
-
-    y_pred = make_prediction(X_train, y_train, X_test).astype(int)
-    y_pred.to_csv('src/prediction.csv', header=True)
-
-    print('\nAll done.')
+    print('\nAll done. File exported to data/prediction.csv')
 
 
 if __name__ == '__main__':
 
+    # Run main function
     main()
