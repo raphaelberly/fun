@@ -36,6 +36,6 @@ It uses the dataset *data/mcdonalds.csv* of 1,525 labelled McDonald's reviews in
 
 **The objective of this project is to provide the likelihood that a complaint is referring to rude service.** McDonald's could then use this project to build a "rudeness dashboard" for their staff, so that employees can spend a few minutes each day examining the most relevant recent comments.
 
-The method implemented here uses a Multinomial Naive Bayes model for classification. An AUC (Area Under Curve) of over 78% is reached (cross-validation score).
+The method implemented here uses a Multinomial Naive Bayes model for classification. An AUC (Area Under Curve) of over 0.829 is reached (cross-validation estimate).
 
-The file *data/mcdonalds_new.csv* contains 10 other reviews, on which the user can test the trained model. A method is provided for that matter.
+The file *data/mcdonalds_new.csv* contains 10 new reviews, on which the user can test the trained model. A method is provided for that matter (*main* created the file *output.csv*).
