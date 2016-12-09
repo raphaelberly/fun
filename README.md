@@ -15,13 +15,15 @@ Hereby a list of the scripts implemented:
 
 ### SPAM Filter: SMS
 
-This project aims at implementing several methods for SPAM-filtering in Python, on a dataset containing SMS data. It is developed in the script *sms_spam_filter.py*
+This project aims at implementing one method for SPAM-filtering in Python, on a dataset containing SMS data.
 
-It uses a [dataset](https://raw.githubusercontent.com/justmarkham/DAT8/master/data/sms.tsv) of 5,572 labelled SMS, and a Multinomial Naive Bayes model for classification.
+It uses a [dataset](https://raw.githubusercontent.com/justmarkham/DAT8/master/data/sms.tsv) of 5,572 labelled SMS, and a Multinomial Naive Bayes model for classification. It is developed in the file *Notebook.ipynb*
+
+A scripted version of the project has also been implemented, and can be found in *sms_spam_filter.py*. This kind of scripted version is basically the version which is used in practice, after the discovery/research phase, for example in the case where one would have to run the script on new train & test sets on a regular basis.
 
 An overall accuracy of around 99% is reached, with a false positive rate of around 0.4%.
 
-Methods for getting the "top ten spam/ham words" involved in the Naive Bayes prediction process are also included in this script.
+Methods for getting the most "spammy" or "hammy" words involved in the Naive Bayes prediction process are also detailed in this project.
 
 
 -----
