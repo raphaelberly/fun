@@ -6,7 +6,7 @@
 
 This repository gathers some python NLP projects, on several different examples.
 
-Hereby a list of the scripts implemented:
+Hereby a list of the projects:
 
 * [Spam Filter: SMS](#spam-filter-sms)
 * [Sentiment Analysis: McDonald's](#sentiment-analysis-mcdonalds)
