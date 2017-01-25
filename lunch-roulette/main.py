@@ -15,11 +15,11 @@ def load_data():
 # Create list of random indexes
 def create_indexes(nb_participants):
     indexes = [i for i in range(nb_participants)]
-    return shuffle(indexes)
+    return shuffle(shuffle(indexes))
 
 
 # Main function of the script
-def main(nb_teams):
+def main(team_size):
 
     # Load data
     print('\nLoading data...')
@@ -30,6 +30,7 @@ def main(nb_teams):
     print('Randomizing participants...')
     n_participants = data.shape[0]
     indexes = create_indexes(n_participants)
+    nb_teams = n_participants // team_size
     sleep(1)
 
     # Assign teams
@@ -49,11 +50,11 @@ if __name__ == '__main__':
 
     # Create a parser to get the number of teams
     argparser = argparse.ArgumentParser(add_help=False)
-    argparser.add_argument('nb_teams', type=str, help='Number of teams to create')
+    argparser.add_argument('team_size', type=str, help='Number of participants per team')
 
     # Parse the entered argument
-    nb_teams = int(vars(argparser.parse_args())['nb_teams'])
+    team_size = int(vars(argparser.parse_args())['team_size'])
 
     # Run the main function of the file
-    main(nb_teams)
+    main(team_size)
 
