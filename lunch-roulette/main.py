@@ -8,7 +8,8 @@ import argparse
 
 # Create a data frame with participants
 def load_data():
-    df = pd.read_csv('participants.csv')
+    df = pd.read_csv('participants.csv', header=None)
+    df.columns = ['Name']
     return df
 
 
