@@ -1,6 +1,11 @@
 
 # Usual
 .idea
+.gitignore
 
 # Data
 *.csv
+
+# Credentials
+credentials.ini
+register.json
