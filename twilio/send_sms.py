@@ -12,6 +12,7 @@ import configparser
 import json
 import sys
 from twilio.rest import Client
+from twilio.base.exceptions import TwilioRestException
 
 
 def get_numbers_from_register(recipient_name, sender_name="twilio", path_to_register="register.json"):
@@ -59,9 +60,17 @@ def send_sms(recipient_name, sms_body, path_to_credentials, path_to_register="re
     recipient_number, sender_number = get_numbers_from_register(recipient_name, sender_name, path_to_register)
 
     # Send the SMS using the created client
-    message = client.api.account.messages.create(to=recipient_number, from_=sender_number, body=sms_body)
+    try:
+        client.api.account.messages.create(to=recipient_number, from_=sender_number, body=sms_body)
+    except TwilioRestException:
+        sys.exit('Twilio REST API could not send SMS. Please check sender number is valid and recipient is registered.')
+    except TimeoutError:
+        sys.exit('Operation timed out. SMS was not sent.')
+    else:
+        print('SMS was sent successfully to {}.'.format(recipient_name))
 
 
+# IF RUN AS A SCRIPT
 if __name__ == '__main__':
 
     # Create argument parser
