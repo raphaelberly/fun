@@ -31,7 +31,7 @@ def main_etl(object, spreadsheet_id, path_to_credentials, path_to_dump, path_to_
 
     # Transform the data
     print('\nTransforming data...')
-    transform(response, path_to_dump)
+    transform(object, response, path_to_dump)
 
     # Load the data in the spreadsheet
     print('\nLoading data...')

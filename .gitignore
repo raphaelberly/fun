@@ -8,4 +8,5 @@
 
 # Credentials
 credentials.ini
+client_secret.json
 register.json
