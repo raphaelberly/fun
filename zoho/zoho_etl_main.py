@@ -41,7 +41,7 @@ def main_etl(object, spreadsheet_id, path_to_credentials, path_to_dump, path_to_
 # If run as a script
 if __name__ == '__main__':
 
-    object_list = ['invoices', 'expenses']
+    object_list = ['invoices', 'expenses', 'creditnotes', 'creditnotes/refunds']
 
     # Create argument parser
     parser = argparse.ArgumentParser(add_help=False)

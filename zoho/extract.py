@@ -36,7 +36,7 @@ def extract(object, path_to_credentials):
 # If run as a script
 if __name__ == '__main__':
 
-    object_list = ['invoices', 'expenses']
+    object_list = ['invoices', 'expenses', 'creditnotes', 'creditnotes/refunds']
 
     # Create argument parser
     parser = argparse.ArgumentParser(add_help=False)
