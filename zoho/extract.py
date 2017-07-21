@@ -19,7 +19,7 @@ def extract(object, path_to_credentials):
     # Prepare the query
     url = config.get('ZOHO', 'url')
     params = {'authtoken': config.get('ZOHO', 'authtoken'),
-              'organisation_id': config.get('ZOHO', 'organisation_id')}
+              'organization_id': config.get('ZOHO', 'organization_id')}
 
     # Query the data
     try:

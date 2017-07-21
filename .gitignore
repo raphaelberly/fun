@@ -1,7 +1,6 @@
 
 # Usual
 .idea
-.gitignore
 
 # Data
 *.csv
@@ -10,3 +9,4 @@
 credentials.ini
 client_secret.json
 register.json
+zoho/zoho_notes.txt
