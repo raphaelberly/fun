@@ -1,0 +1,65 @@
+
+field_list:
+
+  invoices:
+    - balance
+    - cf_407503000000062122
+    - cf_deposit
+    - cf_pick_up
+    - cf_platform
+    - created_time
+    - currency_code
+    - currency_id
+    - customer_id
+    - customer_name
+    - date
+    - due_date
+    - due_days
+    - exchange_rate
+    - invoice_id
+    - invoice_number
+    - is_emailed
+    - is_viewed_by_client
+    - last_modified_time
+    - last_payment_date
+    - last_reminder_sent_date
+    - payment_expected_date
+    - reminders_sent
+    - status
+    - total
+
+  expenses:
+    - account_name
+    - bcy_total
+    - bcy_total_without_tax
+    - cf_company_paid
+    - cf_paid_by
+    - cf_povrnjeno
+    - created_time
+    - currency_code
+    - currency_id
+    - custom_fields_list
+    - customer_id
+    - customer_name
+    - date
+    - description
+    - distance
+    - end_reading
+    - exchange_rate
+    - expense_id
+    - expense_receipt_name
+    - expense_type
+    - has_attachment
+    - is_billable
+    - is_personal
+    - last_modified_time
+    - mileage_rate
+    - mileage_type
+    - mileage_unit
+    - reference_number
+    - report_id
+    - report_name
+    - start_reading
+    - status
+    - total
+    - total_without_tax
