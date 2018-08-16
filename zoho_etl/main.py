@@ -1,12 +1,3 @@
-"""
-MAIN ZOHO ETL
-
-The purpose of this script is to run successively the extract.py, transform.py and load.py scripts in order to perform
-the ETL of Zoho data.
-
-It should be run with Python 3. Example cmd:
-python invoices 1ovYUVPeCWsujKyPnoADtQz8ly7yGjlTCMNKADp4AqHg ../credentials.ini dump.csv client_secret.json
-"""
 
 import argparse
 import logging
