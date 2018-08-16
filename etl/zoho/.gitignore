@@ -1,7 +1,4 @@
 
-*.pyc
-__pycache__
-
 config/credentials.yaml
 client_secret.json
 

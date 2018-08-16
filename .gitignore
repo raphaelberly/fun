@@ -1,12 +1,4 @@
 
-# Usual
 .idea
-
-# Data
-*.csv
-
-# Credentials
-credentials.ini
-client_secret.json
-register.json
-zoho/zoho_notes.txt
+*.pyc
+__pycache__
