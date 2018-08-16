@@ -1,17 +1,18 @@
+import argparse
 
 import pandas as pd
 import numpy as np
 from sklearn.utils import shuffle
-from time import sleep
+import logging
+
+logging.basicConfig(level=logging.INFO)
+LOGGER = logging.getLogger(__name__)
 
 
 # Create a data frame with data from survey
 
-def load_data():
-    data = pd.read_csv('survey.csv')
-    data['player'] = data['Your Name'].str.cat(data['Your Company'], sep=', ')
-    data['position'] = data['Your Position']
-
+def load_data(input_file):
+    data = pd.read_csv(input_file)
     return data[['player', 'position']]
 
 
@@ -47,22 +48,27 @@ def assign_partners(dataframe):
 # IF RUN AS A SCRIPT
 
 if __name__ == '__main__':
-    # Load data
-    print('\nLoading data...')
-    players = load_data()
-    sleep(1)
 
-    print('Shuffle data...')
+    # Create arguments parser
+    parser = argparse.ArgumentParser(add_help=True)
+    parser.add_argument('--input', required=True, type=str, help='Path to the input CSV file')
+    parser.add_argument('--output', required=True, type=str, help='Path to the output CSV file')
+
+    # Parse arguments
+    args = parser.parse_args()
+
+    # Load data
+    LOGGER.info('Loading data...')
+    players = load_data(args.input)
+
+    LOGGER.info('Shuffling data...')
     # Get the team indexes lists
     indexes_defense, indexes_offense = assign_partners(players)
-    sleep(1)
 
-    print('Create teams...')
-    sleep(1)
+    LOGGER.info('Creating teams...')
     # Create the final data frame and export it
     df = pd.DataFrame({'defense': players.player[indexes_defense].values,
                        'offense': players.player[indexes_offense].values})
-    print('\nRESULT TABLE:\n', df)
 
-    df.to_csv('teams.csv', index=False)
-    print('\nAll done. Enjoy!')
+    df.to_csv(args.output, index=False)
+    LOGGER.info('All done. Output file: {}'.format(args.output))

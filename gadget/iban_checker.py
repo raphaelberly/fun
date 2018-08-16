@@ -8,6 +8,10 @@ entered one.
 
 import sys
 import argparse
+import logging
+
+logging.basicConfig(level=logging.INFO)
+LOGGER = logging.getLogger(__name__)
 
 
 def to_digit_str(iban):
@@ -86,14 +90,15 @@ def check_iban(iban):
 if __name__ == '__main__':
 
     # Create arguments parser
-    parser = argparse.ArgumentParser(add_help=False)
-    parser.add_argument('IBAN', type=str, help='IBAN to check (string format, can contain spaces)')
+    parser = argparse.ArgumentParser(add_help=True)
+    parser.add_argument('iban', type=str, help='IBAN to check (string format, can contain spaces)')
 
     # Parse arguments
-    iban = vars(parser.parse_args())['IBAN']
+    args = parser.parse_args()
+    iban = args.iban
 
     # Print the result of the check
-    if check_iban(iban) is True:
-        print('\nYay. The specified IBAN is correct.\n')
+    if check_iban(iban):
+        LOGGER.info('\nYay. The specified IBAN is correct.\n')
     else:
-        print('\nInvalid IBAN!!\n')
+        LOGGER.error('\nInvalid IBAN!!\n')
