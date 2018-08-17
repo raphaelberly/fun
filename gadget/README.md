@@ -1,4 +1,4 @@
-# Fun
+# Gadgets
 
 ### Overview
 
@@ -7,7 +7,7 @@ This folder gathers some gadgets which I implemented for fun, when I was a Pytho
 Hereby a list of the scripts implemented:
 
 * [IBAN Checker](#iban-checker)
-* [Kicker Tournament](#kicker-tournament)
+* [Foosball Tournament](#foosball-tournament)
 * [Lunch Roulette](#lunch-roulette)
 * [Secret Santa](#secret-santa)
 
@@ -36,7 +36,6 @@ Tim,Defense
 Alan,No preference
 Martin,No preference
 ```
-
 
 -----
 

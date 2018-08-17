@@ -9,14 +9,12 @@ logging.basicConfig(level=logging.INFO)
 LOGGER = logging.getLogger(__name__)
 
 
-# Create a data frame with data from survey
-
-def load_data(input_file):
-    data = pd.read_csv(input_file)
-    return data[['player', 'position']]
-
-
-def assign_partners(dataframe):
+def assign_roles(dataframe):
+    """
+    Assigne a role to each player from the input (i.e. assign "No preference" players to "Offense" or "Defense")
+    :param dataframe: input pandas dataframe containing two columns: players,position
+    :return: two shuffled lists of player indexes, one for offense and the other one for defense
+    """
 
     n_defense = dataframe.position.value_counts()['Defense']
     n_offense = dataframe.position.value_counts()['Offense']
@@ -45,8 +43,6 @@ def assign_partners(dataframe):
     return shuffle(indexes_defense), shuffle(indexes_offense)
 
 
-# IF RUN AS A SCRIPT
-
 if __name__ == '__main__':
 
     # Create arguments parser
@@ -59,11 +55,11 @@ if __name__ == '__main__':
 
     # Load data
     LOGGER.info('Loading data...')
-    players = load_data(args.input)
+    players = pd.read_csv(args.input)[['player', 'position']]
 
     LOGGER.info('Shuffling data...')
     # Get the team indexes lists
-    indexes_defense, indexes_offense = assign_partners(players)
+    indexes_defense, indexes_offense = assign_roles(players)
 
     LOGGER.info('Creating teams...')
     # Create the final data frame and export it

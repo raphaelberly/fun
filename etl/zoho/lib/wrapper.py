@@ -16,13 +16,13 @@ LOGGER = logging.getLogger(__name__)
 class ZohoWrapper:
 
     def __init__(self, config_folder, secret_json, dump_file='dump.txt'):
-
+        # Load credentials
         with open(os.path.join(config_folder, 'credentials.yaml')) as f:
             self.config = {'credentials': yaml.load(f)}
-
+        # Load the rest of the config
         with open(os.path.join(config_folder, 'config.yaml')) as f:
             self.config.update(yaml.load(f))
-
+        # Instantiate files path
         self.secret_json = secret_json
         self.dump_file = dump_file
 
@@ -53,8 +53,8 @@ class ZohoWrapper:
     def transform(self, object, response_str):
         """
         The aim of this function is to transform the data received from Zoho API and to store the result into a CSV dump.
+        :param object: object to query (e.g. "invoices", "expenses")
         :param response_str: response string (UTF-8 encoding) of the API request
-        :param path_to_dump: Path to the tmp dump
         :return: None
         """
         LOGGER.info('Transforming data...')

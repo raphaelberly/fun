@@ -8,19 +8,11 @@ logging.basicConfig(level=logging.INFO)
 LOGGER = logging.getLogger(__name__)
 
 
-# Create a data frame with participants
-def load_data(input_file):
-    df = pd.read_csv(input_file)
-    return df
-
-
 # Create list of random indexes
 def create_indexes(nb_participants):
     indexes = [i+1 for i in range(nb_participants)]
     return shuffle(indexes)
 
-
-# MAIN OF SCRIPT
 
 if __name__ == '__main__':
 
@@ -34,7 +26,7 @@ if __name__ == '__main__':
 
     # Load data
     LOGGER.info('Loading data...')
-    data = load_data(args.input)
+    data = pd.read_csv(args.input)
 
     # Randomize participants
     LOGGER.info('Randomizing participants...')
