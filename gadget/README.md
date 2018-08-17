@@ -25,7 +25,7 @@ Usage example: `python iban_checker.py FR7601234567890123456789`
 
 This script aims at creating random two-person teams, using a list of names and their preferred position ("Offense", "Defense" or "No preference"). It was used for several Foosball Tournaments with colleagues.
 
-Usage example: `python kicker-tournament/main.py --input survey.csv --output teams.csv*`
+Usage example: `python kicker-tournament/main.py --input survey.csv --output teams.csv`
 
 Input CSV file example:
 
