@@ -1,10 +1,9 @@
 ## Natural Language Processing in Python
 
-**Author:** [Raphael Berly](https://www.linkedin.com/in/raphaelberly), data scientist at [Erento](https://www.erento.com/info/jobs/).
 
 ### Overview
 
-This repository gathers some python NLP projects, on several different examples.
+This folder gathers some small python NLP projects, on several different examples
 
 Hereby a list of the projects:
 

@@ -2,7 +2,7 @@
 
 ### Overview
 
-This folder gathers some gadgets which I implemented for fun, when I was a Python newcomer.
+This folder contains various small python "gadgets" which I implemented for fun, when I was a Python newcomer.
 
 Hereby a list of the scripts implemented:
 

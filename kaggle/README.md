@@ -1,10 +1,9 @@
 # Kaggle Competitions
 
-**Author:** [Raphael Berly](https://www.linkedin.com/in/raphaelberly), data scientist at [Erento](https://www.erento.com/info/jobs/).
 
 ### Overview
 
-This repository gathers my work on several Kaggle competitions I participated to.
+This folder gathers my work on several small Kaggle competitions I participated to.
 
 Hereby a list of the different competitions:
 
