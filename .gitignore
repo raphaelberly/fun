@@ -1,0 +1,15 @@
+# Created by .ignore support plugin (hsz.mobi)
+
+.idea
+*.pyc
+__init__.py
+.ipynb_checkpoints
+
+# Titanic Project
+/titanic/data/
+/titanic/testing*.ipynb
+
+# Stack Overflow Project
+/stack-overflow-private/out
+/stack-overflow-private/data
+/stack-overflow-private/Statistical_Distributions.ipynb
