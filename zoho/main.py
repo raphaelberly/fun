@@ -2,7 +2,7 @@
 import argparse
 import logging
 
-from lib.wrapper import ZohoWrapper
+from zoho.lib import ZohoWrapper
 
 logging.basicConfig(level=logging.INFO)
 LOGGER = logging.getLogger(__name__)

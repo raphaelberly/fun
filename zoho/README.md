@@ -1,4 +1,3 @@
-
 # Zoho ETL
 
 The purpose of this program is to perform the ETL of Zoho data from Zoho API to a Google Drive spreadsheet.
