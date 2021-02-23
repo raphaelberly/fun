@@ -1,0 +1,5 @@
+mailjet_rest
+requests
+pyyaml
+bs4
+jinja2

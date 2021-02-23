@@ -1,0 +1,7 @@
+.idea
+*.pyc
+__pycache__
+.ipynb_checkpoints
+
+conf/credentials.yaml
+conf/mailer.yaml
